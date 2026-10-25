@@ -1,4 +1,4 @@
-resource "aws_instance" "fe_public_1" {
+resource "aws_instance" "fe_public_01" {
   ami                         = data.aws_ami.amazon_linux.id
   instance_type               = "t3.micro"
   subnet_id                   = data.terraform_remote_state.network.outputs.fe_pub_1_id
