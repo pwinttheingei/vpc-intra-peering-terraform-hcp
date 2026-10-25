@@ -2,7 +2,7 @@ data "terraform_remote_state" "network" {
   backend = "remote"
   config = {
     organization = "Pwint_Org1"
-    workspaces   = { name = "be-network-ws" }
+    workspaces   = { name = "be-network" }
   }
 }
 
@@ -10,7 +10,7 @@ data "terraform_remote_state" "security" {
   backend = "remote"
   config = {
     organization = "Pwint_Org1"
-    workspaces   = { name = "be-security-ws" }
+    workspaces   = { name = "be-security" }
   }
 }
 

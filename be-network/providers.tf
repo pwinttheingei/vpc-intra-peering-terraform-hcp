@@ -2,7 +2,7 @@ terraform {
   cloud {
     organization = "Pwint_Org1"
     workspaces {
-      name = "be-network-ws"
+      name = "be-network"
     }
   }
   required_providers {

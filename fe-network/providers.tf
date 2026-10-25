@@ -2,7 +2,7 @@ terraform {
   cloud {
     organization = "Pwint_Org1" # HCP Terraform Org Name ပြောင်းပါ
     workspaces {
-      name = "fe-network-ws"
+      name = "fe-network"
     }
   }
   required_providers {
