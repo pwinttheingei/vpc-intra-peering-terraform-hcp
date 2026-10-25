@@ -1,7 +1,7 @@
 # Public Security Group
 resource "aws_security_group" "be_pub_sg_01" {
   name   = "be-pub-sg-01"
-  vpc_id = data.terraform_remote_state.network.outputs.backend_vpc_id
+  vpc_id = data.terraform_remote_state.network.outputs.backend_vpc1_id
 }
 resource "aws_vpc_security_group_ingress_rule" "be_pub_ssh" {
   security_group_id = aws_security_group.be_pub_sg_01.id
@@ -26,7 +26,7 @@ resource "aws_vpc_security_group_egress_rule" "be_pub_egress" {
 # Private Security Group 01
 resource "aws_security_group" "be_pri_sg_01" {
   name   = "be-pri-sg-01"
-  vpc_id = data.terraform_remote_state.network.outputs.backend_vpc_id
+  vpc_id = data.terraform_remote_state.network.outputs.backend_vpc1_id
 }
 resource "aws_vpc_security_group_ingress_rule" "be_pri1_ssh" {
   security_group_id            = aws_security_group.be_pri_sg_01.id
@@ -51,7 +51,7 @@ resource "aws_vpc_security_group_egress_rule" "be_pri1_egress" {
 # Private Security Group 02
 resource "aws_security_group" "be_pri_sg_02" {
   name   = "be-pri-sg-02"
-  vpc_id = data.terraform_remote_state.network.outputs.backend_vpc_id
+  vpc_id = data.terraform_remote_state.network.outputs.backend_vpc1_id
 }
 resource "aws_vpc_security_group_ingress_rule" "be_pri2_ssh" {
   security_group_id            = aws_security_group.be_pri_sg_02.id
@@ -76,7 +76,7 @@ resource "aws_vpc_security_group_egress_rule" "be_pri2_egress" {
 # Private Security Group 03
 resource "aws_security_group" "be_pri_sg_03" {
   name   = "be-pri-sg-03"
-  vpc_id = data.terraform_remote_state.network.outputs.backend_vpc_id
+  vpc_id = data.terraform_remote_state.network.outputs.backend_vpc1_id
 }
 resource "aws_vpc_security_group_ingress_rule" "be_pri3_ssh" {
   security_group_id            = aws_security_group.be_pri_sg_03.id
