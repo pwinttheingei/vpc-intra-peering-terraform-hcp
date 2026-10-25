@@ -5,7 +5,7 @@ resource "aws_instance" "be_public_1" {
   associate_public_ip_address = true
   vpc_security_group_ids      = [data.terraform_remote_state.security.outputs.be_pub_sg_id]
   key_name                    = aws_key_pair.generated_key.key_name
-  tags                        = { Name = "public-instance-01" }
+  tags                        = { Name = "public-instance-1" }
 }
 
 resource "aws_instance" "be_private_1" {
@@ -14,7 +14,7 @@ resource "aws_instance" "be_private_1" {
   subnet_id              = data.terraform_remote_state.network.outputs.be_pri_1_id
   vpc_security_group_ids = [data.terraform_remote_state.security.outputs.be_pri_sg_1_id]
   key_name               = aws_key_pair.generated_key.key_name
-  tags                   = { Name = "private-instance-01" }
+  tags                   = { Name = "private-instance-1" }
 }
 
 resource "aws_instance" "be_private_2" {
@@ -23,7 +23,7 @@ resource "aws_instance" "be_private_2" {
   subnet_id              = data.terraform_remote_state.network.outputs.be_pri_2_id
   vpc_security_group_ids = [data.terraform_remote_state.security.outputs.be_pri_sg_2_id]
   key_name               = aws_key_pair.generated_key.key_name
-  tags                   = { Name = "private-instance-02" }
+  tags                   = { Name = "private-instance-2" }
 }
 
 resource "aws_instance" "be_private_3" {
@@ -32,5 +32,5 @@ resource "aws_instance" "be_private_3" {
   subnet_id              = data.terraform_remote_state.network.outputs.be_pri_3_id
   vpc_security_group_ids = [data.terraform_remote_state.security.outputs.be_pri_sg_3_id]
   key_name               = aws_key_pair.generated_key.key_name
-  tags                   = { Name = "private-instance-03" }
+  tags                   = { Name = "private-instance-3" }
 }
